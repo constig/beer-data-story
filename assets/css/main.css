@@ -3889,7 +3889,7 @@ sup {
 #team {
   width: 90%;
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 1100px;
 }
 @media only screen and (min-width: 550px) {
   #team {
@@ -3902,17 +3902,25 @@ sup {
 .user {
   text-align: center;
   font-size: 60px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: block;
+  justify-content: space-between;
+}
+.user-sub {
+  display: block;
   justify-content: space-between;
 }
 .user p {
   font-size: 16px;
 }
-@media only screen and (min-width: 550px) {
+@media only screen and (min-width: 1100px) {
   .user {
-    flex-wrap: nowrap;
+    display: flex;
+    font-size: 75px;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .user-sub {
+    display: flex;
     font-size: 75px;
   }
 }
@@ -3925,7 +3933,7 @@ sup {
   flex-direction: column;
   justify-content: space-between;
   width: 90%;
-  max-width: 960px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 @media only screen and (min-width: 550px) {
@@ -3967,6 +3975,7 @@ body {
   }
   .images-right img {
     float: right;
+    width: 100%;
   }
   .images-left {
     float: left;
@@ -3974,6 +3983,7 @@ body {
   }
   .images-left img {
     float: left;
+    width: 100%;
   }
 }
 .project-link {
@@ -4055,4 +4065,13 @@ body {
   to {
     transform: rotate(405deg);
   }
+}
+iframe[seamless] {
+  border: none;
+}
+.team-img {
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
