@@ -1,6 +1,14 @@
 <div class="user-details">
   <h1> Data Story change </h1>
 </div>
+
+<div style="margin: 5px 0;" class="user-details">
+  <p> To start, we will test some fun interactive plots. </p>
+  <div class="user">
+    <iframe style="width: 100%; aspect-ratio: 1" src="{{ "/assets/plots/sunburst.html" | prepend: site.baseurl }}" seamless></iframe>
+  </div>
+</div>
+
 <div class="user-projects">
   <div class="images-right">
     <img alt="mountains" src="{{ "/assets/img/mountains.jpg" | prepend: site.baseurl }}" />
@@ -30,13 +38,8 @@
 
 <div style="margin: 5px 0;" class="user-details">
   <h1> Plot Testing </h1>
-  <p> We will now test some fun interactive plots. </p>
-  <div class="user">
-    <iframe style="width: 100%; height: 500px" src="{{ "/assets/plots/general.html" | prepend: site.baseurl }}" seamless></iframe>
-    <iframe style="width: 100%; height: 500px" src="{{ "/assets/plots/Bock.html" | prepend: site.baseurl }}" seamless></iframe>
-  </div>
   <p> We will now test some more fun interactive plots. </p>
   <div class="user">
-    <iframe style="width: 100%; height: 500px" src="{{ "/assets/plots/Lambic.html" | prepend: site.baseurl }}" seamless></iframe>
+    <iframe style="width: 100%; aspect-ratio: 5/3" src="{{ "/assets/plots/general.html" | prepend: site.baseurl }}" seamless></iframe>
   </div>
 </div>
