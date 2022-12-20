@@ -1,9 +1,15 @@
 <div class="user-details">
-  <h1> Data Story change </h1>
+  <h1> Do alcohol consumption of a country influence its beer reviews? </h1>
 </div>
 
 <div style="margin: 5px 0;" class="user-details">
-  <p> To start, we will test some fun interactive plots. </p>
+  <p> The world can be divided by regions based on their alcohol consumption habits. 
+    The world is then not split into countries anymore but into four *culturally similar*, (based on alcohol consumption) regions. 
+    We can distinguish: the predominantly **beer drinking** countries, the predominantly **wine drinking** countries, the predominantly **spirit drinking** countries and the countries that don't have any predominance. \
+    Here is a map to visualize this: </p>
+  <div class="user">
+    <iframe style="width: 100%; aspect-ratio: 1" src="{{ "/assets/plots/map_principal_beverage.html" | prepend: site.baseurl }}" seamless></iframe>
+  </div>
   <div class="user">
     <iframe style="width: 100%; aspect-ratio: 1" src="{{ "/assets/plots/sunburst.html" | prepend: site.baseurl }}" seamless></iframe>
   </div>
