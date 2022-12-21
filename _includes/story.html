@@ -44,12 +44,30 @@
 
 <div class="section-left">
   <p class="subtitle"> Let's examine the grade differences per beer type now! </p>
-</div>
-
-</div>
-<p>Now that we have more general types of beer, we can easily compare if the differences between grades we have still follow the same trend. Will we find the same pattern ( <i>eg better grades in beer countries</i>)?</p>
-  <div class="user">
-    <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/grades_type_overall.html" | prepend: site.baseurl }}" seamless></iframe>
+  <p>Now that we have more general types of beer, we can easily compare if the differences between grades we have still follow the same trend. Will we find the same pattern ( <i>eg better grades in beer countries</i>)?</p>
+  <select name="Grade Type" id="grade-type">
+    <option value="overall">Overall</option>
+    <option value="palate">Palate</option>
+    <option value="taste">Taste</option>
+    <option value="appearance">Appearance</option>
+    <option value="aroma">Aroma</option>
+  </select>
+  <div class="user select-plot-main" style="width: 100%; aspect-ratio: 16/9">
+    <div class="select-plot" id="overall-plot" style="opacity: 0;">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/grades_type_overall.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+    <div class="select-plot" id="palate-plot" style="opacity: 0;">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/grades_type_palate.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+    <div class="select-plot" id="taste-plot" style="opacity: 0;">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/grades_type_taste.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+    <div class="select-plot" id="appearance-plot" style="opacity: 0;">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/grades_type_appearance.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+    <div class="select-plot" id="aroma-plot" style="opacity: 0;">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/grades_type_aroma.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
   </div>
   <p> Kieran paragraphe sur les p values... we still find the same trends... except for</p>
 </div>

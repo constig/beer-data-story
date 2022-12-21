@@ -4102,3 +4102,16 @@ iframe[seamless] {
   margin: auto;
   min-width: 500px;
 }
+.select-plot-main {
+  position: relative;
+}
+.select-plot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+}
+select {
+  font-family: "Montserrat", sans-serif;
+  font-size: medium;
+}
