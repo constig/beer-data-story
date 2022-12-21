@@ -4085,3 +4085,20 @@ iframe[seamless] {
   font-size: 2rem;
   margin: 15px 0;
 }
+.img-large {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+.img-medium {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  min-width: 500px;
+}
+.img-small {
+  width: 60%;
+  height: auto;
+  margin: auto;
+  min-width: 500px;
+}
