@@ -55,9 +55,6 @@
 
 <div class="section-left">
   <p class="subtitle"> Overview of the grades given per region </p>
-</div>
-
-<div class="section-left">
   <p> Let's have a look at the mean in the ratings as function of the drinking habits, for each category: </p>
   <div class="user">
     <iframe style="width: 100%; height: 600px;" src="/assets/plots/grades_beverage.html" seamless></iframe>
@@ -69,10 +66,7 @@
 
 <div class="section-left">
   <p class="subtitle"> Separation of beer types into more general types </p>
-</div>
-
-</div>
-<p>For the moment, we have 70 different beer styles. But let's regroup them into larger categories! Maybe we will find similar trends (better grades given by beer regions) in some beer types and not in others!  </p>
+  <p>For the moment, we have 70 different beer styles. But let's regroup them into larger categories! Maybe we will find similar trends (better grades given by beer regions) in some beer types and not in others!  </p>
   <div class="user">
     <iframe style="width: 100%; aspect-ratio: 1;" src="/assets/plots/sunburst.html" seamless></iframe>
   </div>
@@ -89,7 +83,7 @@
     <option value="appearance">Appearance</option>
     <option value="aroma">Aroma</option>
   </select>
-  <div class="user select-plot-main" style="width: 100%; aspect-ratio: 16/9">
+  <div class="select-plot-main" style="width: 100%; aspect-ratio: 16/9">
     <div class="select-plot" id="overall-plot" style="opacity: 0;">
       <iframe style="width: 100%; aspect-ratio: 16/9" src="/assets/plots/grades_type_overall.html" seamless></iframe>
     </div>
@@ -115,18 +109,67 @@
   Aitana: est ce qu'on pourrait pas ajouter une analyse sur le nombre moyen de mots par commentaire /voir si c'est aussi lié au nombre de reviews (meme juste un tableau ou une phrase) </p>
 </div>
 
+
 <div class="section-left">
+
   <p class="subtitle"> Ranking of the popularity of the types of beer </p>
-</div>
-</div>
-<p>We consider that the popularity of a type of beer is calculated thanks to the number of reviews on this type of beer compared to the others. <br>
-Let's see the ranking of general type of beers popularity (on the left), and for each general type we can observe the repartition for each sub-type. <br> <br>
-Also, for each region, they dedicated a proportion of the total reviews number to different types of beers. Some beers are more popular in a region than in an other, for example, <i> wine region dedicated 19.39% of its reviews to Belgian/French Ale </i> which is more than all other regions and this information is shown on the plot thanks to the color of the corresponding bar.
-The color of the bar is then determined by the principal_beverage region where this type of beer is more popular than in the other region.</p>
-  <div class="user">
-    <iframe style="width: 100%; aspect-ratio: 16/9" src="/assets/plots/general.html" seamless></iframe>
-  </div>
+  <p>We consider that the popularity of a type of beer is calculated thanks to the number of reviews on this type of beer compared to the others. <br>
+  Let's see the ranking of general type of beers popularity (on the left), and for each general type we can observe the repartition for each sub-type. <br> <br>
+  Also, for each region, they dedicated a proportion of the total reviews number to different types of beers. Some beers are more popular in a region than in an other, for example, <i> wine region dedicated 19.39% of its reviews to Belgian/French Ale </i> which is more than all other regions and this information is shown on the plot thanks to the color of the corresponding bar.
+  The color of the bar is then determined by the principal_beverage region where this type of beer is more popular than in the other region.</p>
+
   <p> Don't hesitate to use the cursor to see details on the number of reviews! </p>
+
+  <select name="Beer Type" id="beer-type" style="position: relative; float: right;">
+    <option value="paleale">Pale Ale</option>
+    <option value="otherslagers">Others Lagers</option>
+    <option value="belgianfrenchale">Belgian/French Ale</option>
+    <option value="stoutporter">Stout/Porter</option>
+    <option value="otherales">Other Ales</option>
+    <option value="others">Others</option>
+    <option value="bock">Bock</option>
+    <option value="lambic">Lambic</option>
+  </select>
+
+  <div class="double-plot">
+
+    <div class="double-plot-left">
+      <iframe style="width: 100%; height: 100%" src="/assets/plots/general.html" seamless></iframe>
+      <div class="highlighter" id="highlighter"></div>
+    </div>
+
+    <div class="double-plot-right">
+      <div class="select-plot-main">
+        <div class="select-plot" id="paleale-plot" style="opacity: 0;">
+          <iframe style="width: 100%; height: 100%;" src="/assets/plots/aaPaleAle.html" seamless></iframe>
+        </div>
+        <div class="select-plot" id="otherslagers-plot" style="opacity: 0;">
+          <iframe style="width: 100%; height: 100%;" src="/assets/plots/aaOthersLagers.html" seamless></iframe>
+        </div>
+        <div class="select-plot" id="belgianfrenchale-plot" style="opacity: 0;">
+          <iframe style="width: 100%; height: 100%;" src="/assets/plots/aaBelgianFrenchAle.html" seamless></iframe>
+        </div>
+        <div class="select-plot" id="stoutporter-plot" style="opacity: 0;">
+          <iframe style="width: 100%; height: 100%;" src="/assets/plots/aaStoutPorter.html" seamless></iframe>
+        </div>
+        <div class="select-plot" id="otherales-plot" style="opacity: 0;">
+         <iframe style="width: 100%; height: 100%;" src="/assets/plots/aaOtherAles.html" seamless></iframe>
+        </div>
+        <div class="select-plot" id="others-plot" style="opacity: 0;">
+          <iframe style="width: 100%; height: 100%;" src="/assets/plots/aaOthers.html" seamless></iframe>
+        </div>
+        <div class="select-plot" id="bock-plot" style="opacity: 0;">
+          <iframe style="width: 100%; height: 100%;" src="/assets/plots/aaBock.html" seamless></iframe>
+        </div>
+        <div class="select-plot" id="lambic-plot" style="opacity: 0;">
+          <iframe style="width: 100%; height: 100%;" src="/assets/plots/aaLambic.html" seamless></iframe>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
 </div>
 
 <div class="section-left">
