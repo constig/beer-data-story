@@ -82,14 +82,14 @@ document.addEventListener(
       });
 
     let dict = {
-      'paleale': 0*44,
-      'otherslagers': 1*44,
-      'belgianfrenchale': 2*44,
-      'stoutporter': 3*44,
-      'otherales': 4*44,
-      'others': 5*44,
-      'bock': 6*44,
-      'lambic': 7*44
+      'paleale': 0*45,
+      'otherslagers': 1*45,
+      'belgianfrenchale': 2*45,
+      'stoutporter': 3*45,
+      'otherales': 4*45,
+      'others': 5*45,
+      'bock': 6*45,
+      'lambic': 7*45
     };
 
     grade_category = document.getElementById('beer-type').value;
