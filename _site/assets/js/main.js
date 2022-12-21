@@ -59,17 +59,42 @@ document.addEventListener(
       retina_detect: !0,
     });
 
-  grade_category = document.getElementById('grade-type').value;
-  document.getElementById(grade_category + '-plot').style.opacity = 1;
-
-  document.getElementById('grade-type').addEventListener('change', function() {
-    grade_category_list = ['overall', 'palate', 'taste', 'appearance', 'aroma']
-    grade_category_list.forEach(element => {
-      document.getElementById(element + '-plot').style.opacity = 0;
-    });
-
     grade_category = document.getElementById('grade-type').value;
     document.getElementById(grade_category + '-plot').style.opacity = 1;
+
+    document.getElementById('grade-type').addEventListener('change', function() {
+      grade_category_list = ['overall', 'palate', 'taste', 'appearance', 'aroma']
+      grade_category_list.forEach(element => {
+        document.getElementById(element + '-plot').style.opacity = 0;
+      });
+
+      grade_category = document.getElementById('grade-type').value;
+      document.getElementById(grade_category + '-plot').style.opacity = 1;
+    })
+
+    beer_category = document.getElementById('beer-type').value;
+    document.getElementById(beer_category + '-plot').style.opacity = 1;
+
+    document.getElementById('beer-type').addEventListener('change', function() {
+      beer_category_list = ['paleale', 'otherslagers', 'belgianfrenchale', 'stoutporter', 'otherales', 'others', 'bock', 'lambic']
+      beer_category_list.forEach(element => {
+        document.getElementById(element + '-plot').style.opacity = 0;
+      });
+
+    let dict = {
+      'paleale': 0*44,
+      'otherslagers': 1*44,
+      'belgianfrenchale': 2*44,
+      'stoutporter': 3*44,
+      'otherales': 4*44,
+      'others': 5*44,
+      'bock': 6*44,
+      'lambic': 7*44
+    };
+
+    grade_category = document.getElementById('beer-type').value;
+    document.getElementById(grade_category + '-plot').style.opacity = 1;
+    document.getElementById('highlighter').style.transform = 'translateY(' + dict[grade_category] + 'px)';
   })
 
   },
