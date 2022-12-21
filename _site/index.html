@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="user-scalable=no" />
 
   <title>BEERS AROUND THE WORLD</title>
   <meta name="description" content="A geographical study on the link between drinking habits and online beer reviews">
@@ -34,45 +35,44 @@
 </div>
 
       <section id="story">
-        <div class="user-details">
-  <h1> Data Story change </h1>
+        <div class="section">
+  <h1> Does the alcohol consumption of a country influence its beer reviews? </h1>
 </div>
 
-<div style="margin: 5px 0;" class="user-details">
-  <p> To start, we will test some fun interactive plots. </p>
+<div class="section-left">
+  <p class="subtitle"> Context </p>
+</div>
+
+<div class="section-left">
+  <p> The world can be divided by regions based on their alcohol consumption habits. 
+    The <i>world</i> is then not split into countries anymore but into four <strong>culturally similar</strong>, (based on alcohol consumption) regions. 
+    We can distinguish: the predominantly <strong>beer drinking</strong> countries, the predominantly <strong>wine drinking</strong> countries, the predominantly <strong>spirit drinking</strong> countries and the countries that don't have any predominance. <br> <br>
+    Here is a map to visualize this: </p>
+  <div class="user">
+    <iframe style="width: 100%; aspect-ratio: 16/9" src="/assets/plots/map_principal_beverage.html" seamless></iframe>
+  </div>
+</div>
+
+<div class="section-left">
+  <p> Let's have a look at the mean in the ratings as function of the drinking habits, for each category: </p>
+  <div class="user">
+    <iframe style="width: 100%; aspect-ratio: 1" src="/assets/plots/grades_beverage.html" seamless></iframe>
+  </div>
+  <p>You can use your mouse to zoom on CI to see well that even if the differences are small, there are significant.
+    You may want to zoom on upper values to have a better view of the situation (for example, put zoom with your cursor between 3 and 4). You can also use the dropdown to select the category!
+    It would appear that countries that mostly drink beers, also give them better scores (in overall but also in each category!) ! Spirit and wine look more demanding, but what is behind this? Is it significant?</p>
+</div>
+
+
+
+</div>
   <div class="user">
     <iframe style="width: 100%; aspect-ratio: 1" src="/assets/plots/sunburst.html" seamless></iframe>
   </div>
 </div>
 
-<div class="user-projects">
-  <div class="images-right">
-    <img alt="mountains" src="/assets/img/mountains.jpg" />
-  </div>
-  <div class="contents">
-    <h3> Project Title </h3>
-    <ul>
-      <li> Featured Skills</li>
-    </ul>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <a class="project-link" href="#">Check it out</a>
-  </div>
-</div>
-<div class="user-projects">
-  <div class="images-left">
-    <img alt="mountains" src="/assets/img/skate.jpg" />
-  </div>
-  <div class="contents-right">
-    <h3> Project Title </h3>
-    <ul>
-      <li> Featured Skills</li>
-    </ul>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <a class="project-link" href="#">Check it out</a>
-  </div>
-</div>
 
-<div style="margin: 5px 0;" class="user-details">
+<div style="margin: 5px 0;" class="section">
   <h1> Plot Testing </h1>
   <p> We will now test some more fun interactive plots. </p>
   <div class="user">
@@ -82,7 +82,7 @@
 
       </section>
       <section id="team">
-         <div class="user-details">
+         <div class="section">
   <h1> Meet the Team </h1>
   <p> Our team <strong>Fraises TagADA</strong> consists of the following members: </p>
 </div>
@@ -102,7 +102,7 @@
     <div class="user-sub">
       <div class="tech">
         <h2>Kieran VAUDAUX</h2>
-        <img class="team-img" src="/assets/img/blank.png"></img>
+        <img class="team-img" src="/assets/img/kieran.JPG"></img>
         <p>Short Description</p>
       </div>
       <div class="tech">
