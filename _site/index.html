@@ -54,29 +54,101 @@
 </div>
 
 <div class="section-left">
+  <p class="subtitle"> Overview of the grades given per region </p>
+</div>
+
+<div class="section-left">
   <p> Let's have a look at the mean in the ratings as function of the drinking habits, for each category: </p>
   <div class="user">
     <iframe style="width: 100%; height: 600px;" src="/assets/plots/grades_beverage.html" seamless></iframe>
   </div>
-  <p>You can use your mouse to zoom on CI to see well that even if the differences are small, there are significant.
-    You may want to zoom on upper values to have a better view of the situation (for example, put zoom with your cursor between 3 and 4). You can also use the dropdown to select the category!
-    It would appear that countries that mostly drink beers, also give them better scores (in overall but also in each category!) ! Spirit and wine look more demanding, but what is behind this? Is it significant?</p>
+  <p> Don't hesitate to use the zoom to better observe the mean differences and their confidence intervals! <br>
+     You can also use the dropdown to select the grade category! <br>
+    It would appear that countries that mostly drink beers, also give them better scores (in overall but also in each category!) ! Spirit and wine look more demanding, but <i>what is behind this? What does that mean?</i></p>
+</div>
+
+<div class="section-left">
+  <p class="subtitle"> Separation of beer types into more general types </p>
 </div>
 
 </div>
+<p>For the moment, we have 70 different beer styles. But let's regroup them into larger categories! Maybe we will find similar trends (better grades given by beer regions) in some beer types and not in others!  </p>
   <div class="user">
-    <iframe style="width: 100%; aspect-ratio: 1" src="/assets/plots/sunburst.html" seamless></iframe>
+    <iframe style="width: 100%; aspect-ratio: 1;" src="/assets/plots/sunburst.html" seamless></iframe>
   </div>
+  <p>Don't hesitate to have a click around!</p>
 </div>
+
+<div class="section-left">
+  <p class="subtitle"> Let's examine the grade differences per beer type now! </p>
+</div>
+
+</div>
+<p>Now that we have more general types of beer, we can easily compare if the differences between grades we have still follow the same trend. Will we find the same pattern ( <i>eg better grades in beer countries</i>)?</p>
+  <div class="user">
+    <iframe style="width: 100%; aspect-ratio: 16/9" src="/assets/plots/grades_type_overall.html" seamless></iframe>
+  </div>
+  <p> Kieran paragraphe sur les p values... we still find the same trends... except for</p>
+</div>
+
+<div class="section-left">
+  <p class="subtitle"> Are some regions more talkative than others? </p>
+  <p> Kieran paragraphe, Are there differences in the number of reviews depending on the region? Some regions seem more expressive than others (give more reviews)... <br>
+  Aitana: est ce qu'on pourrait pas ajouter une analyse sur le nombre moyen de mots par commentaire /voir si c'est aussi lié au nombre de reviews (meme juste un tableau ou une phrase) </p>
+</div>
+
+<div class="section-left">
+  <p class="subtitle"> Ranking of the popularity of the types of beer </p>
+</div>
+</div>
+<p>We consider that the popularity of a type of beer is calculated thanks to the number of reviews on this type of beer compared to the others. <br>
+Let's see the ranking of general type of beers popularity (on the left), and for each general type we can observe the repartition for each sub-type. <br> <br>
+Also, for each region, they dedicated a proportion of the total reviews number to different types of beers. Some beers are more popular in a region than in an other, for example, <i> wine region dedicated 19.39% of its reviews to Belgian/French Ale </i> which is more than all other regions and this information is shown on the plot thanks to the color of the corresponding bar.
+The color of the bar is then determined by the principal_beverage region where this type of beer is more popular than in the other region.</p>
+  <div class="user">
+    <iframe style="width: 100%; aspect-ratio: 16/9" src="/assets/plots/general.html" seamless></iframe>
+  </div>
+  <p> Don't hesitate to use the cursor to see details on the number of reviews! </p>
+</div>
+
+<div class="section-left">
+  <p class="subtitle"> Are there differences in the ABV [%] of the more popular beer per region? </p>
+</div>
+</div>
+<p>Let's now take all the type of beers that we just found more popular in some regions than others and see if they have some particularity in terms of ABV %. <br>
+Here are the mean values of ABV % of the beers that are more popular in a region than in the others:   </p>
+  <div class="user">
+    <img class="img-large" src="/assets/plots/ttest.png"></img>
+  </div>
+  <p> T-tests were conducted taking a specific region vs all other three regions combined and confirmed that all these differences are indeed significant!</p>
+</div>
+
+<div class="section-left">
+  <p class="subtitle">Heatmap of the correlations of alcohol ABV [%] </p>
+</div>
+</div>
+<p>  Kieran paragraphe </p>
+</div>
+
+<div class="section-left">
+  <p class="subtitle">Comments analysis now! </p>
+</div>
+</div>
+<p>  Aitana and Hendrik </p>
+</div>
+<br><br>
+
+
 
 
 <div style="margin: 5px 0;" class="section">
-  <h1> Plot Testing Goes Here</h1>
-  <p> We will now test some more fun interactive plots. </p>
+  <h1> Test Aitana</h1>
+  <p> J'essaye de voir si les widgetFigure marhce sur un site web</p>
   <div class="user">
-    <iframe style="width: 100%; aspect-ratio: 5/3" src="/assets/plots/general.html" seamless></iframe>
+    <iframe style="width: 100%; aspect-ratio: 5/3" src="/assets/plots/test.html" seamless></iframe>
   </div>
 </div>
+
 
       </section>
       <section id="team">
