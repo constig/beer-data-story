@@ -2,6 +2,7 @@ document.addEventListener(
   "DOMContentLoaded",
   function () {
     new SweetScroll({});
+
     particlesJS("particles-js", {
       particles: {
         number: { value: 300, density: { enable: !0, value_area: 500 } },
@@ -57,6 +58,20 @@ document.addEventListener(
       },
       retina_detect: !0,
     });
+
+  grade_category = document.getElementById('grade-type').value;
+  document.getElementById(grade_category + '-plot').style.opacity = 1;
+
+  document.getElementById('grade-type').addEventListener('change', function() {
+    grade_category_list = ['overall', 'palate', 'taste', 'appearance', 'aroma']
+    grade_category_list.forEach(element => {
+      document.getElementById(element + '-plot').style.opacity = 0;
+    });
+
+    grade_category = document.getElementById('grade-type').value;
+    document.getElementById(grade_category + '-plot').style.opacity = 1;
+  })
+
   },
   !1
 );
