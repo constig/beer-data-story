@@ -59,7 +59,10 @@ document.addEventListener(
       retina_detect: !0,
     });
 
-    document.getElementById('overall-plot').style.visibility='visible';
+    beer_category_list = ['paleale', 'otherslagers', 'belgianfrenchale', 'stoutporter', 'otherales', 'others', 'bock', 'lambic', 'overall', 'palate', 'taste', 'appearance', 'aroma']
+    beer_category_list.forEach(element => {
+      document.getElementById(element + '-plot').style.visibility='visible';
+    });
 
     document.getElementById('grade-type').addEventListener('change', function() {
       grade_category_list = ['overall', 'palate', 'taste', 'appearance', 'aroma']
@@ -70,8 +73,6 @@ document.addEventListener(
       grade_category = document.getElementById('grade-type').value;
       document.getElementById(grade_category + '-plot').style.visibility='visible';
     })
-
-    document.getElementById('paleale-plot').style.visibility='visible';
 
     document.getElementById('beer-type').addEventListener('change', function() {
       beer_category_list = ['paleale', 'otherslagers', 'belgianfrenchale', 'stoutporter', 'otherales', 'others', 'bock', 'lambic']
@@ -94,6 +95,12 @@ document.addEventListener(
       document.getElementById(grade_category + '-plot').style.visibility='visible';
       document.getElementById('highlighter').style.transform = 'translateY(' + dict[grade_category] + 'px)';
     })
+
+    beer_category_list = ['otherslagers', 'belgianfrenchale', 'stoutporter', 'otherales', 'others', 'bock', 'lambic', 'palate', 'taste', 'appearance', 'aroma']
+
+    beer_category_list.forEach(element => {
+      document.getElementById(element + '-plot').style.visibility = 'hidden';
+    });
   },
   !1
 );
