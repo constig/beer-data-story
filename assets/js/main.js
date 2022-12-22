@@ -59,44 +59,48 @@ document.addEventListener(
       retina_detect: !0,
     });
 
-    grade_category = document.getElementById('grade-type').value;
-    document.getElementById(grade_category + '-plot').style.opacity = 1;
+    beer_category_list = ['paleale', 'otherslagers', 'belgianfrenchale', 'stoutporter', 'otherales', 'others', 'bock', 'lambic', 'overall', 'palate', 'taste', 'appearance', 'aroma']
+    beer_category_list.forEach(element => {
+      document.getElementById(element + '-plot').style.visibility='visible';
+    });
 
     document.getElementById('grade-type').addEventListener('change', function() {
       grade_category_list = ['overall', 'palate', 'taste', 'appearance', 'aroma']
       grade_category_list.forEach(element => {
-        document.getElementById(element + '-plot').style.opacity = 0;
+        document.getElementById(element + '-plot').style.visibility = 'hidden';
       });
 
       grade_category = document.getElementById('grade-type').value;
-      document.getElementById(grade_category + '-plot').style.opacity = 1;
+      document.getElementById(grade_category + '-plot').style.visibility='visible';
     })
-
-    beer_category = document.getElementById('beer-type').value;
-    document.getElementById(beer_category + '-plot').style.opacity = 1;
 
     document.getElementById('beer-type').addEventListener('change', function() {
       beer_category_list = ['paleale', 'otherslagers', 'belgianfrenchale', 'stoutporter', 'otherales', 'others', 'bock', 'lambic']
       beer_category_list.forEach(element => {
-        document.getElementById(element + '-plot').style.opacity = 0;
+        document.getElementById(element + '-plot').style.visibility = 'hidden';
       });
 
-    let dict = {
-      'paleale': 0*45,
-      'otherslagers': 1*45,
-      'belgianfrenchale': 2*45,
-      'stoutporter': 3*45,
-      'otherales': 4*45,
-      'others': 5*45,
-      'bock': 6*45,
-      'lambic': 7*45
-    };
+      let dict = {
+        'paleale': 0*45,
+        'otherslagers': 1*45,
+        'belgianfrenchale': 2*45,
+        'stoutporter': 3*45,
+        'otherales': 4*45,
+        'others': 5*45,
+        'bock': 6*45,
+        'lambic': 7*45
+      };
 
-    grade_category = document.getElementById('beer-type').value;
-    document.getElementById(grade_category + '-plot').style.opacity = 1;
-    document.getElementById('highlighter').style.transform = 'translateY(' + dict[grade_category] + 'px)';
-  })
+      grade_category = document.getElementById('beer-type').value;
+      document.getElementById(grade_category + '-plot').style.visibility='visible';
+      document.getElementById('highlighter').style.transform = 'translateY(' + dict[grade_category] + 'px)';
+    })
 
+    beer_category_list = ['otherslagers', 'belgianfrenchale', 'stoutporter', 'otherales', 'others', 'bock', 'lambic', 'palate', 'taste', 'appearance', 'aroma']
+
+    beer_category_list.forEach(element => {
+      document.getElementById(element + '-plot').style.visibility = 'hidden';
+    });
   },
   !1
 );
