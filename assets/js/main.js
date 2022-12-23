@@ -60,7 +60,7 @@ document.addEventListener(
     });
 
     // DROP DOWN PLOT 1: GRADE CATEGORY
-    
+
     // Hide all subplots
     grade_category_list = ['overall', 'palate', 'taste', 'appearance', 'aroma']
     grade_category_list.forEach(element => {
@@ -116,6 +116,29 @@ document.addEventListener(
       document.getElementById(beer_category + '-plot').style.visibility = 'visible';
       document.getElementById('highlighter').style.transform = 'translateY(' + dict[beer_category] + 'px)';
     });
+
+    // Heatmap
+    grade_category_list = ['overall','aroma','taste','appearance','palate']
+    country_category_list = ['beer','wine','spirit','no_predominance']
+    grade_category_list.forEach(element => {
+      country_category_list.forEach(element_c => {
+        document.getElementById(element + '-' + element_c + '-plot').style.visibility='visible'
+    });
+   });
+
+
+  document.getElementById('grade-country-heatmap').addEventListener('change', function() {
+   grade_category_list = ['overall','aroma','taste','appearance','palate']
+   country_category_list = ['beer','wine','spirit','no_predominance']
+   grade_category_list.forEach(element => {
+     country_category_list.forEach(element_c => {
+       document.getElementById(element + '-' + element_c + '-plot').style.visibility='hidden'
+   });
+  });
+
+  grade_country_category = document.getElementById('grade-country-heatmap').value;
+  document.getElementById(grade_country_category + '-plot').style.visibility='visible'
+  });
 
 
     // DROP DOWN PLOT 2: READABILITY CATEGORY
