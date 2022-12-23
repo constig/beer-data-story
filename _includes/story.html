@@ -15,7 +15,7 @@
     <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/map_principal_beverage.html" | prepend: site.baseurl }}" seamless></iframe>
   </div>
 
-  <p>As you can see the United Kingdom is not a beer country which provides an answer to the famous maxim from William Skakesbeer (I guess):
+  <p>As you can see the United Kingdom is not a beer country which provides an answer to the famous maxim from William Skakesbeer (I guess he should not have a lot of friend with this kind of habits):
   <center> To beer or not to beer, that is the question. </center></p>
 </div>
 
@@ -150,12 +150,24 @@ Here are the mean values of ABV % of the beers that are more popular in a region
   <div class="user">
     <img class="img-large" src="{{ "/assets/plots/ttest.png" | prepend: site.baseurl }}"></img>
   </div>
-  <p> T-tests were conducted taking a specific region vs all other three regions combined and confirmed that all these differences are indeed significant!</p>
+  <p> T-tests were conducted taking a specific region vs all other three regions combined and confirmed that all these
+    differences are indeed significant!<br>
+  Surprisingly, the average alcohol percentage in spirit countries is relatively lower than in other countries.
+  This is rather counter-intuitive, but could be due to the fact that people who often drink hard liquor might prefer to
+  drink lighter beers to contrast with their hard liquor consumption.</p>
 </div>
 
 
 <div class="section-left">
   <p class="subtitle">Heatmap of the correlations of alcohol ABV [%] and the different grade review </p>
+
+  <p>For a given country label, we asked about the correlation between the differences in alcohol percentage and the
+    scores between two types of beer. Is one type of beer more appreciated than another because of a significant difference
+    in alcohol percentage? And if so, does this difference influence the scores of these beers positively or negatively? <br>
+  On the different heatmaps below, the convention is that between two types of beer the corresponding cell will have the value
+  1 if there is a positive correlation between the percentage of alcohol and the grade, the value -1 if the correlation
+  detected is negative and 0 if no significant correlation is detected. </p>
+
   <select name="Grade" id="grade-country-heatmap" style="position: relative; float: left;">
     <option value="overall-beer">Beer - Overall</option>
     <option value="aroma-beer">Beer - Aroma</option>
@@ -247,11 +259,13 @@ Here are the mean values of ABV % of the beers that are more popular in a region
       <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/test_appearance_no_predominance.html" | prepend: site.baseurl }}" seamless></iframe>
     </div>
   </div>
+
+  <p>  These heatmaps allow us to observe a rather interesting pattern. There appear to be two sub-groups of beer types
+    for which the extra-groups and intra-groups correlation appears to be relatively similar across each country label and
+    grade. </p>
 </div>
 
-</div>
-<p>  Kieran paragraphe </p>
-</div>
+
 
 <div class="section-left">
   <p class="subtitle">What do the reviews have to say? </p>
