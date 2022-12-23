@@ -71,11 +71,6 @@
   <p> Kieran paragraphe sur les p values... we still find the same trends... except for</p>
 </div>
 
-<div class="section-left">
-  <p class="subtitle"> Are some regions more talkative than others? </p>
-  <p> Kieran paragraphe, Are there differences in the number of reviews depending on the region? Some regions seem more expressive than others (give more reviews)... <br>
-  Aitana: est ce qu'on pourrait pas ajouter une analyse sur le nombre moyen de mots par commentaire /voir si c'est aussi lié au nombre de reviews (meme juste un tableau ou une phrase) </p>
-</div>
 
 
 <div class="section-left">
@@ -292,11 +287,51 @@ Here are the mean values of ABV % of the beers that are more popular in a region
 
 <div class="section-left">
   <p class="subtitle"> Do some regions express themselves in a more positive/negative way?</p>
-</div>
-</div>
-<p> Let's see:  </p>
-  <div class="user">
-    <iframe style="width: 100%; aspect-ratio: 16/9;" src="{{ "/assets/plots/sentiment_BelgianFrenchAle.html" | prepend: site.baseurl }}" seamless></iframe>
+  <p> do again separation per beer type</p>
+  <select name="Sentiment Type" id="sentiment-type">
+    <option value="lambic">Lambic</option>
+    <option value="bock">Belgian/French Ale</option>
+    <option value="otherales">Other Ales</option>
+  </select>
+  <div class="select-plot-main" style="width: 100%; aspect-ratio: 16/9">
+    <div class="select-plot" id="lambic-sentiment-plot">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/sentiment_Lambic.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+    <div class="select-plot" id="bock-sentiment-plot">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/sentiment_Bock.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+    <div class="select-plot" id="otherales-sentiment-plot">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/sentiment_OtherAles.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
   </div>
   <p> see trend where beer region more positive</p>
 </div>
+
+
+<div class="section-left">
+  <p class="subtitle">What do they say? </p>
+  <p>  intro : (expliquer qu'on a pris que certains types significatifs) </p>
+  <p>  Here are the word clouds for each region, for <strong> Belgian/French Ale</strong> : </p>
+  <div class="user">
+    <img class="img-large" src="{{ "/assets/plots/belgian.jpg" | prepend: site.baseurl }}"></img>
+  </div>
+<<<<<<< HEAD
+  <p> see trend where beer region more positive</p>
+</div>
+=======
+  <p>  décrire </p>
+
+  <p>  Here are the word cloud for <strong>Pale Ale</strong> </p>
+  <div class="user">
+    <img class="img-large" src="{{ "/assets/plots/pale.jpg" | prepend: site.baseurl }}"></img>
+  </div>
+  <p>  décrire </p>
+
+  <p>  Here are the word cloud for <strong>Stout</strong> </p>
+  <div class="user">
+    <img class="img-large" src="{{ "/assets/plots/stout.jpg" | prepend: site.baseurl }}"></img>
+  </div>
+  <p>  décrire </p>
+
+</div>
+>>>>>>> f1c48b005f72786a2ce93031ffe8efb827270442
