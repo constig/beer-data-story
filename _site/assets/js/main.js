@@ -59,11 +59,18 @@ document.addEventListener(
       retina_detect: !0,
     });
 
-    beer_category_list = ['paleale', 'otherslagers', 'belgianfrenchale', 'stoutporter', 'otherales', 'others', 'bock', 'lambic', 'overall', 'palate', 'taste', 'appearance', 'aroma']
-    beer_category_list.forEach(element => {
-      document.getElementById(element + '-plot').style.visibility='visible';
+    // DROP DOWN PLOT 1: GRADE CATEGORY
+    
+    // Hide all subplots
+    grade_category_list = ['overall', 'palate', 'taste', 'appearance', 'aroma']
+    grade_category_list.forEach(element => {
+      document.getElementById(element + '-plot').style.visibility = 'hidden';
     });
 
+    // Show default subplot
+    document.getElementById('overall-plot').style.visibility = 'visible';
+
+    // Create event listener to detect dropdown change
     document.getElementById('grade-type').addEventListener('change', function() {
       grade_category_list = ['overall', 'palate', 'taste', 'appearance', 'aroma']
       grade_category_list.forEach(element => {
@@ -71,9 +78,23 @@ document.addEventListener(
       });
 
       grade_category = document.getElementById('grade-type').value;
-      document.getElementById(grade_category + '-plot').style.visibility='visible';
-    })
+      document.getElementById(grade_category + '-plot').style.visibility = 'visible';
+    });
 
+
+
+    // DROP DOWN PLOT 2: BEER CATEGORY
+
+    // Hide all subplots
+    beer_category_list = ['paleale', 'otherslagers', 'belgianfrenchale', 'stoutporter', 'otherales', 'others', 'bock', 'lambic']
+    beer_category_list.forEach(element => {
+      document.getElementById(element + '-plot').style.visibility = 'hidden';
+    });
+
+    // Show default subplot
+    document.getElementById('paleale-plot').style.visibility = 'visible';
+
+    // Create event listener to detect dropdown change
     document.getElementById('beer-type').addEventListener('change', function() {
       beer_category_list = ['paleale', 'otherslagers', 'belgianfrenchale', 'stoutporter', 'otherales', 'others', 'bock', 'lambic']
       beer_category_list.forEach(element => {
@@ -91,16 +112,34 @@ document.addEventListener(
         'lambic': 312
       };
 
-      grade_category = document.getElementById('beer-type').value;
-      document.getElementById(grade_category + '-plot').style.visibility='visible';
-      document.getElementById('highlighter').style.transform = 'translateY(' + dict[grade_category] + 'px)';
+      beer_category = document.getElementById('beer-type').value;
+      document.getElementById(beer_category + '-plot').style.visibility = 'visible';
+      document.getElementById('highlighter').style.transform = 'translateY(' + dict[beer_category] + 'px)';
+    });
+
+
+    // DROP DOWN PLOT 2: READABILITY CATEGORY
+
+    // Hide all subplots
+    readability_category_list = ['paleale', 'belgianfrenchale', 'otherlagers']
+    readability_category_list.forEach(element => {
+      document.getElementById(element + '-readability-plot').style.visibility = 'hidden';
+    });
+
+    // Show default subplot
+    document.getElementById('paleale-readability-plot').style.visibility = 'visible';
+
+    document.getElementById('readability-type').addEventListener('change', function() {
+      readability_category_list = ['paleale', 'belgianfrenchale', 'otherlagers']
+      readability_category_list.forEach(element => {
+        document.getElementById(element + '-readability-plot').style.visibility = 'hidden';
+      });
+
+      // Create event listener to detect dropdown change
+      readability_category = document.getElementById('readability-type').value;
+      document.getElementById(readability_category + '-readability-plot').style.visibility = 'visible';
     })
 
-    beer_category_list = ['otherslagers', 'belgianfrenchale', 'stoutporter', 'otherales', 'others', 'bock', 'lambic', 'palate', 'taste', 'appearance', 'aroma']
-
-    beer_category_list.forEach(element => {
-      document.getElementById(element + '-plot').style.visibility = 'hidden';
-    });
   },
   !1
 );

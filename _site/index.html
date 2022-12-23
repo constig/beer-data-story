@@ -184,6 +184,7 @@ Here are the mean values of ABV % of the beers that are more popular in a region
   <p> T-tests were conducted taking a specific region vs all other three regions combined and confirmed that all these differences are indeed significant!</p>
 </div>
 
+
 <div class="section-left">
   <p class="subtitle">Heatmap of the correlations of alcohol ABV [%] </p>
 </div>
@@ -193,23 +194,52 @@ Here are the mean values of ABV % of the beers that are more popular in a region
 
 <div class="section-left">
   <p class="subtitle">Comments analysis now! </p>
-</div>
-</div>
-<p>  Aitana and Hendrik </p>
+  <p>  we do that ...: </p>
+  <div class="user">
+    <img class="img-large" src="/assets/plots/clusters.png"></img>
+  </div>
+  <div class="user">
+    <iframe style="width: 100%; aspect-ratio: 16/9" src="/assets/plots/pie_plot_no_title.html" seamless></iframe>
+  </div>
+<p>  words cluster explanation </p>
 </div>
 <br><br>
 
 
 
-
-<div style="margin: 5px 0;" class="section">
-  <h1> Test Aitana</h1>
-  <p> Let's study the link between the complexity of a text and its sentiment.</p>
-  <div class="user">
-    <iframe style="width: 100%; aspect-ratio: 5/3" src="/assets/plots/complexity_sentiment_normal_height.html" seamless></iframe>
+<div class="section-left">
+  <p class="subtitle"> Do some region write in a more complexe way than others? </p>
+  <p> do again separation per beer type</p>
+  <select name="Readability Type" id="readability-type">
+    <option value="paleale">Pale Ale</option>
+    <option value="belgianfrenchale">Belgian/French Ale</option>
+    <option value="otherlagers">Other Lagers</option>
+  </select>
+  <div class="select-plot-main" style="width: 100%; aspect-ratio: 16/9">
+    <div class="select-plot" id="paleale-readability-plot">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="/assets/plots/readability_PaleAle.html" seamless></iframe>
+    </div>
+    <div class="select-plot" id="belgianfrenchale-readability-plot">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="/assets/plots/readability_BelgianFrenchAle.html" seamless></iframe>
+    </div>
+    <div class="select-plot" id="otherlagers-readability-plot">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="/assets/plots/readability_OthersLagers.html" seamless></iframe>
+    </div>
   </div>
+  <p> see trend where beer region more simple</p>
 </div>
 
+
+<div class="section-left">
+  <p class="subtitle"> Do some regions express themselves in a more positive/negative way?</p>
+</div>
+</div>
+<p> Let's see:  </p>
+  <div class="user">
+    <iframe style="width: 100%; aspect-ratio: 16/9;" src="/assets/plots/sentiment_BelgianFrenchAle.html" seamless></iframe>
+  </div>
+  <p> see trend where beer region more positive</p>
+</div>
       </section>
       <section id="team">
          <div class="section">
