@@ -160,7 +160,7 @@ document.addEventListener(
       // Create event listener to detect dropdown change
       sentiment_category = document.getElementById('sentiment-type').value;
       document.getElementById(sentiment_category + '-sentiment-plot').style.visibility = 'visible';
-      })
+      });
 
   },
   !1
