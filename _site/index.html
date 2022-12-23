@@ -305,23 +305,34 @@ Here are the mean values of ABV % of the beers that are more popular in a region
 
 
 <div class="section-left">
-  <p class="subtitle">Comments analysis now! </p>
-  <p>  we do that ...: </p>
+  <p class="subtitle">What do the reviews have to say? </p>
+  <p>  Comments can provide additional information that we would not be able to pick up from grades.
+     First, let's see which are the main topics users like to discuss when reviewing beers. For that, we will vectorize the comments into a Tf-idf matrix,
+      and apply a Kmean clustering. The 4 main topics in the comments are presented below. Since each list of words correspond to the centroid of a cluster,
+      we can conclude that these words are a good representation of the topic for a cluster. </p>
   <div class="user">
     <img class="img-large" src="/assets/plots/clusters.png"></img>
   </div>
   <div class="user">
-    <iframe style="width: 100%; aspect-ratio: 16/9" src="/assets/plots/pie_plot_no_title.html" seamless></iframe>
+    <iframe style="width: 100%; height: 350px;" src="/assets/plots/pie_plot_no_title.html" seamless></iframe>
   </div>
-<p>  words cluster explanation </p>
+<p>We found out that </i>Cluster 1</i> contains most of the comments. Therefore, the main topic in the reviews seems to be a positive sentiment and the use of beer related words.
+  (blague en mode que le site a des good vibes). This first cluster represents the main attributes used to describe a beer mixed positive words.
+  On the other hand </i>Cluster 2</i>, </i>3</i> and </i>4</i> were found to contain less comments and seem to represent more specific topics than </i>Cluster 1</i>. Each one of these clusters focuses on special 
+  beers in terms of aroma and taste (</i>Cluster 2</i> focuses on brown, dark, caramel beers; </i>Cluster 3</i> focuses on fruity flavors such as cherry, sour… and </i>Cluster 4</i> is focused on chocolate and coffee flavours). 
+<p>Now that we know which are the main topics in the comments, let’s see if your drinking habits are linked to the topics you will discuss when reviewing! It looks like wine drinkers are more represented in
+   the first and more general cluster. However, spirit drinkers tend to be more linked to fruity (</i>Cluster 2</i>) and dark/brown beer (</i>Cluster 3</i>). The last cluster, related to chocolate and coffee beers, has a majority
+   of beer reviewers.</p>
 </div>
 <br><br>
 
 
 
 <div class="section-left">
-  <p class="subtitle"> Do some region write in a more complexe way than others? </p>
-  <p> do again separation per beer type</p>
+  <p class="subtitle"> Do some regions write in a more complexe way than others? </p>
+  <p>Comments can reflect sentiments, and this can be studied across the different
+    drinking habit regions. The sentiment score we use goes from -1 to 1 (where -1 is a negative comment, 0 is neutral and 1 is very positive). We can see that overall, the mean sentiment of the reviews is positive!
+    Indeed, the main topic we found during the clustering analysis also suggested that a lot of comments used positive words.We found out beer drinkers tend to write more positive comments, and this happens to be true for all types of beers. Here are the results for the 3 types of beer where the sentiment difference was the most significant. </p>
   <select name="Readability Type" id="readability-type">
     <option value="paleale">Pale Ale</option>
     <option value="belgianfrenchale">Belgian/French Ale</option>
@@ -338,16 +349,18 @@ Here are the mean values of ABV % of the beers that are more popular in a region
       <iframe style="width: 100%; aspect-ratio: 16/9" src="/assets/plots/readability_OthersLagers.html" seamless></iframe>
     </div>
   </div>
-  <p> see trend where beer region more simple</p>
+  <p> </p>
 </div>
 
 
 <div class="section-left">
   <p class="subtitle"> Do some regions express themselves in a more positive/negative way?</p>
-  <p> do again separation per beer type</p>
+  <p> Now, let's study the complexity of the comments! Here, we used the Dale-Chall readability grade with a range between 0 and 100. It assesses the
+    comprehension difficulty of a reader when reading the comment. In order to define if a comment has difficult words, the algorithm will, putting
+    other things aside, compare these words to 3000 words commonly used by an average fourth-grade American student.</p>
   <select name="Sentiment Type" id="sentiment-type">
     <option value="lambic">Lambic</option>
-    <option value="bock">Belgian/French Ale</option>
+    <option value="bock">Bock</option>
     <option value="otherales">Other Ales</option>
   </select>
   <div class="select-plot-main" style="width: 100%; aspect-ratio: 16/9">
@@ -361,37 +374,32 @@ Here are the mean values of ABV % of the beers that are more popular in a region
       <iframe style="width: 100%; aspect-ratio: 16/9" src="/assets/plots/sentiment_OtherAles.html" seamless></iframe>
     </div>
   </div>
-  <p> see trend where beer region more positive</p>
+  <p>We found out that beer drinkers tend to use a less complex language when it comes to reviews.</p>
 </div>
 
 
 <div class="section-left">
   <p class="subtitle">What do they say? </p>
-  <p>  intro : (expliquer qu'on a pris que certains types significatifs) </p>
+  <p> </p>
   <p>  Here are the word clouds for each region, for <strong> Belgian/French Ale</strong> : </p>
   <div class="user">
-    <img class="img-large" src="/assets/plots/belgian.jpg"></img>
+    <img class="img-large" src="/assets/plots/belgian2.png"></img>
   </div>
-<<<<<<< HEAD
-  <p> see trend where beer region more positive</p>
-</div>
-=======
   <p>  décrire </p>
 
   <p>  Here are the word cloud for <strong>Pale Ale</strong> </p>
   <div class="user">
-    <img class="img-large" src="/assets/plots/pale.jpg"></img>
+    <img class="img-large" src="/assets/plots/pale2.png"></img>
   </div>
   <p>  décrire </p>
 
   <p>  Here are the word cloud for <strong>Stout</strong> </p>
   <div class="user">
-    <img class="img-large" src="/assets/plots/stout.jpg"></img>
+    <img class="img-large" src="/assets/plots/stout2.png"></img>
   </div>
   <p>  décrire </p>
 
 </div>
->>>>>>> f1c48b005f72786a2ce93031ffe8efb827270442
 
       </section>
       <section id="team">

@@ -277,7 +277,7 @@ Here are the mean values of ABV % of the beers that are more popular in a region
     <img class="img-large" src="{{ "/assets/plots/clusters.png" | prepend: site.baseurl }}"></img>
   </div>
   <div class="user">
-    <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/pie_plot_no_title.html" | prepend: site.baseurl }}" seamless></iframe>
+    <iframe style="width: 100%; height: 350px;" src="{{ "/assets/plots/pie_plot_no_title.html" | prepend: site.baseurl }}" seamless></iframe>
   </div>
 <p>We found out that </i>Cluster 1</i> contains most of the comments. Therefore, the main topic in the reviews seems to be a positive sentiment and the use of beer related words.
   (blague en mode que le site a des good vibes). This first cluster represents the main attributes used to describe a beer mixed positive words.
@@ -318,12 +318,12 @@ Here are the mean values of ABV % of the beers that are more popular in a region
 
 <div class="section-left">
   <p class="subtitle"> Do some regions express themselves in a more positive/negative way?</p>
-  <p> Now, let’s study the complexity of the comments! Here, we used the Dale-Chall readability grade with a range between 0 and 100. It assesses the
+  <p> Now, let's study the complexity of the comments! Here, we used the Dale-Chall readability grade with a range between 0 and 100. It assesses the
     comprehension difficulty of a reader when reading the comment. In order to define if a comment has difficult words, the algorithm will, putting
     other things aside, compare these words to 3000 words commonly used by an average fourth-grade American student.</p>
   <select name="Sentiment Type" id="sentiment-type">
     <option value="lambic">Lambic</option>
-    <option value="bock">Belgian/French Ale</option>
+    <option value="bock">Bock</option>
     <option value="otherales">Other Ales</option>
   </select>
   <div class="select-plot-main" style="width: 100%; aspect-ratio: 16/9">
@@ -346,25 +346,20 @@ Here are the mean values of ABV % of the beers that are more popular in a region
   <p> </p>
   <p>  Here are the word clouds for each region, for <strong> Belgian/French Ale</strong> : </p>
   <div class="user">
-    <img class="img-large" src="{{ "/assets/plots/belgian.jpg" | prepend: site.baseurl }}"></img>
+    <img class="img-large" src="{{ "/assets/plots/belgian2.png" | prepend: site.baseurl }}"></img>
   </div>
-<<<<<<< HEAD
-  <p> </p>
-</div>
-=======
   <p>  décrire </p>
 
   <p>  Here are the word cloud for <strong>Pale Ale</strong> </p>
   <div class="user">
-    <img class="img-large" src="{{ "/assets/plots/pale.jpg" | prepend: site.baseurl }}"></img>
+    <img class="img-large" src="{{ "/assets/plots/pale2.png" | prepend: site.baseurl }}"></img>
   </div>
   <p>  décrire </p>
 
   <p>  Here are the word cloud for <strong>Stout</strong> </p>
   <div class="user">
-    <img class="img-large" src="{{ "/assets/plots/stout.jpg" | prepend: site.baseurl }}"></img>
+    <img class="img-large" src="{{ "/assets/plots/stout2.png" | prepend: site.baseurl }}"></img>
   </div>
   <p>  décrire </p>
 
 </div>
->>>>>>> f1c48b005f72786a2ce93031ffe8efb827270442
