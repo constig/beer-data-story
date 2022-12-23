@@ -7,8 +7,8 @@
 </div>
 
 <div class="section-left">
-  <p> The world can be divided by regions based on their alcohol consumption habits. 
-    The <i>world</i> is then not split into countries anymore but into four <strong>culturally similar</strong>, (based on alcohol consumption) regions. 
+  <p> The world can be divided by regions based on their alcohol consumption habits.
+    The <i>world</i> is then not split into countries anymore but into four <strong>culturally similar</strong>, (based on alcohol consumption) regions.
     We can distinguish: the predominantly <strong>beer drinking</strong> countries, the predominantly <strong>wine drinking</strong> countries, the predominantly <strong>spirit drinking</strong> countries and the countries that don't have any predominance. <br> <br>
     Here is a map to visualize this: </p>
   <div class="user">
@@ -24,12 +24,17 @@
   </div>
   <p> Don't hesitate to use the zoom to better observe the mean differences and their confidence intervals! <br>
      You can also use the dropdown to select the grade category! <br>
-    It would appear that countries that mostly drink beers, also give them better scores (in overall but also in each category!) ! Spirit and wine look more demanding, but <i>what is behind this? What does that mean?</i></p>
+     <br>
+    It would appear that countries that mostly drink beers, also give them better scores (in overall but also in each category!) ! Spirit and wine look more demanding, but <i>what is behind this? What does that mean?</i><br>
+    In the rest of our analysis, in order to don't have to much equation and math in the data story, we will use the convention that all the result state as significant will be significant at a 95% confidence level. From now the only equation we are likely to meet is of this kind: <br>
+    Beer is made from hops. Hops is a plant. Beer=salad.
+</p>
 </div>
 
 <div class="section-left">
   <p class="subtitle"> Separation of beer types into more general types </p>
-  <p>For the moment, we have 70 different beer styles. But let's regroup them into larger categories! Maybe we will find similar trends (better grades given by beer regions) in some beer types and not in others!  </p>
+
+  <p>Beer doesn’t have much vitamins, that’s why you have to drink lots of it. But, hopefully, we have 70 different beer styles to be healthy. But let's regroup them into larger categories! Maybe we will find similar trends (better grades given by beer regions) in some beer types and not in others!  </p>
   <div class="user">
     <iframe style="width: 100%; aspect-ratio: 1;" src="{{ "/assets/plots/sunburst.html" | prepend: site.baseurl }}" seamless></iframe>
   </div>
@@ -144,8 +149,100 @@ Here are the mean values of ABV % of the beers that are more popular in a region
 
 
 <div class="section-left">
-  <p class="subtitle">Heatmap of the correlations of alcohol ABV [%] </p>
+  <p class="subtitle">Heatmap of the correlations of alcohol ABV [%] and the different grade review </p>
+  <select name="Grade" id="grade-country-heatmap" style="position: relative; float: left;">
+    <option value="overall-beer">Beer - Overall</option>
+    <option value="aroma-beer">Beer - Aroma</option>
+    <option value="palate-beer">Beer - Palate</option>
+    <option value="taste-beer">Beer - Taste</option>
+    <option value="appearance-beer">Beer - Appearance</option>
+    <option value="overall-wine">Wine - Overall</option>
+    <option value="aroma-wine">Wine - Aroma</option>
+    <option value="palate-wine">Wine - Palate</option>
+    <option value="taste-wine">Wine - Taste</option>
+    <option value="appearance-wine">Wine - Appearance</option>
+    <option value="overall-spirit">Spirit - Overall</option>
+    <option value="aroma-spirit">Spirit - Aroma</option>
+    <option value="palate-spirit">Spirit - Palate</option>
+    <option value="taste-spirit">Spirit - Taste</option>
+    <option value="appearance-spirit">Spirit - Appearance</option>
+    <option value="overall-no_predominance">No predominance - Overall</option>
+    <option value="aroma-no_predominance">No predominance - Aroma</option>
+    <option value="palate-no_predominance">No predominance - Palate</option>
+    <option value="taste-no_predominance">No predominance - Taste</option>
+    <option value="appearance-no_predominance">No predominance - Appearance</option>
+  </select>
+  <p> <br>  </p>
+
+  <div class="select-plot-main" style="width: 100%; aspect-ratio: 16/9">
+    <!-- overall -->
+    <div class="select-plot" id="overall-beer-plot" >
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/test_overall_beer.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+    <div class="select-plot" id="overall-wine-plot">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/test_overall_wine.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+    <div class="select-plot" id="overall-spirit-plot">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/test_overall_spirit.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+    <div class="select-plot" id="overall-no_predominance-plot">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/test_overall_no_predominance.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+    <!-- aroma -->
+    <div class="select-plot" id="aroma-beer-plot" >
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/test_aroma_beer.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+    <div class="select-plot" id="aroma-wine-plot">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/test_aroma_wine.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+    <div class="select-plot" id="aroma-spirit-plot">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/test_aroma_spirit.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+    <div class="select-plot" id="aroma-no_predominance-plot">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/test_aroma_no_predominance.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+    <!-- palate -->
+    <div class="select-plot" id="palate-beer-plot" >
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/test_palate_beer.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+    <div class="select-plot" id="palate-wine-plot">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/test_palate_wine.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+    <div class="select-plot" id="palate-spirit-plot">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/test_palate_spirit.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+    <div class="select-plot" id="palate-no_predominance-plot">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/test_palate_no_predominance.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+    <!-- taste -->
+    <div class="select-plot" id="taste-beer-plot" >
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/test_taste_beer.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+    <div class="select-plot" id="taste-wine-plot">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/test_taste_wine.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+    <div class="select-plot" id="taste-spirit-plot">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/test_taste_spirit.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+    <div class="select-plot" id="taste-no_predominance-plot">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/test_taste_no_predominance.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+    <!-- appearance -->
+    <div class="select-plot" id="appearance-beer-plot" >
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/test_appearance_beer.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+    <div class="select-plot" id="appearance-wine-plot">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/test_appearance_wine.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+    <div class="select-plot" id="appearance-spirit-plot">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/test_appearance_spirit.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+    <div class="select-plot" id="appearance-no_predominance-plot">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/test_appearance_no_predominance.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+  </div>
 </div>
+
 </div>
 <p>  Kieran paragraphe </p>
 </div>
@@ -218,6 +315,10 @@ Here are the mean values of ABV % of the beers that are more popular in a region
   <div class="user">
     <img class="img-large" src="{{ "/assets/plots/belgian.jpg" | prepend: site.baseurl }}"></img>
   </div>
+<<<<<<< HEAD
+  <p> see trend where beer region more positive</p>
+</div>
+=======
   <p>  décrire </p>
 
   <p>  Here are the word cloud for <strong>Pale Ale</strong> </p>
@@ -233,3 +334,4 @@ Here are the mean values of ABV % of the beers that are more popular in a region
   <p>  décrire </p>
 
 </div>
+>>>>>>> f1c48b005f72786a2ce93031ffe8efb827270442
