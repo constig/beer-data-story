@@ -4102,6 +4102,12 @@ iframe[seamless] {
   margin: auto;
   min-width: 500px;
 }
+.img-xsmall {
+  width: 20%;
+  height: auto;
+  margin: auto;
+  min-width: 200px;
+}
 .select-plot-main {
   position: relative;
   width: 100%;
