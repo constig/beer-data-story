@@ -62,7 +62,7 @@ document.addEventListener(
     // DROP DOWN PLOT 1: GRADE CATEGORY
 
     // Hide all subplots
-    grade_category_list = ['overall', 'palate', 'taste', 'appearance', 'aroma']
+    grade_category_list = ['overall', 'palate', 'taste', 'appearance', 'aroma'];
     grade_category_list.forEach(element => {
       document.getElementById(element + '-plot').style.visibility = 'hidden';
     });
@@ -72,7 +72,7 @@ document.addEventListener(
 
     // Create event listener to detect dropdown change
     document.getElementById('grade-type').addEventListener('change', function() {
-      grade_category_list = ['overall', 'palate', 'taste', 'appearance', 'aroma']
+      grade_category_list = ['overall', 'palate', 'taste', 'appearance', 'aroma'];
       grade_category_list.forEach(element => {
         document.getElementById(element + '-plot').style.visibility = 'hidden';
       });
@@ -118,8 +118,8 @@ document.addEventListener(
     });
 
     // Heatmap
-    grade_category_list = ['overall','aroma','taste','appearance','palate']
-    country_category_list = ['beer','wine','spirit','no_predominance']
+    grade_category_list = ['overall','aroma','taste','appearance','palate'];
+    country_category_list = ['beer','wine','spirit','no_predominance'];
     grade_category_list.forEach(element => {
       country_category_list.forEach(element_c => {
         document.getElementById(element + '-' + element_c + '-plot').style.visibility='visible'
@@ -128,8 +128,8 @@ document.addEventListener(
 
 
   document.getElementById('grade-country-heatmap').addEventListener('change', function() {
-   grade_category_list = ['overall','aroma','taste','appearance','palate']
-   country_category_list = ['beer','wine','spirit','no_predominance']
+   grade_category_list = ['overall','aroma','taste','appearance','palate'];
+   country_category_list = ['beer','wine','spirit','no_predominance'];
    grade_category_list.forEach(element => {
      country_category_list.forEach(element_c => {
        document.getElementById(element + '-' + element_c + '-plot').style.visibility='hidden'
@@ -144,7 +144,7 @@ document.addEventListener(
     // DROP DOWN PLOT 2: READABILITY CATEGORY
 
     // Hide all subplots
-    readability_category_list = ['paleale', 'belgianfrenchale', 'otherlagers']
+    readability_category_list = ['paleale', 'belgianfrenchale', 'otherlagers'];
     readability_category_list.forEach(element => {
       document.getElementById(element + '-readability-plot').style.visibility = 'hidden';
     });
@@ -153,7 +153,7 @@ document.addEventListener(
     document.getElementById('paleale-readability-plot').style.visibility = 'visible';
 
     document.getElementById('readability-type').addEventListener('change', function() {
-      readability_category_list = ['paleale', 'belgianfrenchale', 'otherlagers']
+      readability_category_list = ['paleale', 'belgianfrenchale', 'otherlagers'];
       readability_category_list.forEach(element => {
         document.getElementById(element + '-readability-plot').style.visibility = 'hidden';
       });
@@ -163,10 +163,11 @@ document.addEventListener(
       document.getElementById(readability_category + '-readability-plot').style.visibility = 'visible';
     })
 
-    // DROPDOWN 3, sentiment analysis
+
+    // DROP DOWN PLOT 3: SENTIMENT ANALYSIS
 
     // Hide all subplots
-    sentiment_category_list = ['paleale', 'bock', 'otherales']
+    sentiment_category_list = ['lambic', 'bock', 'otherales'];
     sentiment_category_list.forEach(element => {
       document.getElementById(element + '-sentiment-plot').style.visibility = 'hidden';
     });
@@ -175,7 +176,7 @@ document.addEventListener(
     document.getElementById('lambic-sentiment-plot').style.visibility = 'visible';
 
     document.getElementById('sentiment-type').addEventListener('change', function() {
-      sentiment_category_list = ['paleale', 'bock', 'otherales']
+      sentiment_category_list = ['lambic', 'bock', 'otherales'];
       sentiment_category_list.forEach(element => {
         document.getElementById(element + '-sentiment-plot').style.visibility = 'hidden';
       });
