@@ -104,3 +104,19 @@ document.addEventListener(
   },
   !1
 );
+
+
+beer_category_list = ['paleale', 'belgianfrenchale', 'otherlagers']
+beer_category_list.forEach(element => {
+  document.getElementById(element + '-plot').style.visibility='visible';
+});
+
+document.getElementById('readability').addEventListener('change', function() {
+  grade_category_list = ['paleale', 'belgianfrenchale', 'otherlagers']
+  grade_category_list.forEach(element => {
+    document.getElementById(element + '-plot').style.visibility = 'hidden';
+  });
+
+  grade_category = document.getElementById('readability-type').value;
+  document.getElementById(grade_category + '-plot').style.visibility='hidden';
+})
