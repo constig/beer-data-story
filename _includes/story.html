@@ -162,13 +162,26 @@ Here are the mean values of ABV % of the beers that are more popular in a region
 </div>
 <br><br>
 
+
+
 <div class="section-left">
-  <p class="subtitle"> Do some region write in a more complexe way than others?</p>
-</div>
-</div>
-<p> do again separation per beer type  </p>
-  <div class="user">
-    <iframe style="width: 100%; aspect-ratio: 16/9;" src="{{ "/assets/plots/readability_BelgianFrenchAle.html" | prepend: site.baseurl }}" seamless></iframe>
+  <p class="subtitle"> Do some region write in a more complexe way than others? </p>
+  <p> do again separation per beer type</p>
+  <select name="Readability Type" id="readability-type">
+    <option value="paleale">Pale Ale</option>
+    <option value="belgianfrenchale">Belgian/French Ale</option>
+    <option value="otherlagers">Other Lagers</option>
+  </select>
+  <div class="select-plot-main" style="width: 100%; aspect-ratio: 16/9">
+    <div class="select-plot" id="paleale-plot">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/readability_PaleAle.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+    <div class="select-plot" id="belgianfrenchale-plot">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/readability_BelgianFrenchAle.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
+    <div class="select-plot" id="otherlagers-plot">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="{{ "/assets/plots/readability_OthersLagers.html" | prepend: site.baseurl }}" seamless></iframe>
+    </div>
   </div>
   <p> see trend where beer region more simple</p>
 </div>
