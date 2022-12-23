@@ -51,6 +51,9 @@
   <div class="user">
     <iframe style="width: 100%; aspect-ratio: 16/9" src="/assets/plots/map_principal_beverage.html" seamless></iframe>
   </div>
+
+  <p>As you can see the United Kingdom is not a beer country which provides an answer to the famous maxim from William Skakesbeer (I guess):
+  <center> To beer or not to beer, that is the question. </center></p>
 </div>
 
 <div class="section-left">
@@ -64,7 +67,7 @@
      <br>
     It would appear that countries that mostly drink beers, also give them better scores (in overall but also in each category!) ! Spirit and wine look more demanding, but <i>what is behind this? What does that mean?</i><br>
     In the rest of our analysis, in order to don't have to much equation and math in the data story, we will use the convention that all the result state as significant will be significant at a 95% confidence level. From now the only equation we are likely to meet is of this kind: <br>
-    Beer is made from hops. Hops is a plant. Beer=salad.
+    <center>Beer is made from hops. Hops is a plant. Beer=salad.</center>
 </p>
 </div>
 
@@ -105,14 +108,12 @@
       <iframe style="width: 100%; aspect-ratio: 16/9" src="/assets/plots/grades_type_aroma.html" seamless></iframe>
     </div>
   </div>
-  <p> Kieran paragraphe sur les p values... we still find the same trends... except for</p>
+  <p> For all the scores and for each different type of beer, we observe that beer countries seem to give better scores.
+    Using a bootstrap procedure, the difference between the average scores of the beer countries and the other countries was
+    found to be significant. Countries with beer as their main alcohol consumption seem to be more inclined to give good
+    ratings to the beers they rate.</p>
 </div>
 
-<div class="section-left">
-  <p class="subtitle"> Are some regions more talkative than others? </p>
-  <p> Kieran paragraphe, Are there differences in the number of reviews depending on the region? Some regions seem more expressive than others (give more reviews)... <br>
-  Aitana: est ce qu'on pourrait pas ajouter une analyse sur le nombre moyen de mots par commentaire /voir si c'est aussi lié au nombre de reviews (meme juste un tableau ou une phrase) </p>
-</div>
 
 
 <div class="section-left">
@@ -329,14 +330,54 @@ Here are the mean values of ABV % of the beers that are more popular in a region
 
 <div class="section-left">
   <p class="subtitle"> Do some regions express themselves in a more positive/negative way?</p>
-</div>
-</div>
-<p> Let's see:  </p>
-  <div class="user">
-    <iframe style="width: 100%; aspect-ratio: 16/9;" src="/assets/plots/sentiment_BelgianFrenchAle.html" seamless></iframe>
+  <p> do again separation per beer type</p>
+  <select name="Sentiment Type" id="sentiment-type">
+    <option value="lambic">Lambic</option>
+    <option value="bock">Belgian/French Ale</option>
+    <option value="otherales">Other Ales</option>
+  </select>
+  <div class="select-plot-main" style="width: 100%; aspect-ratio: 16/9">
+    <div class="select-plot" id="lambic-sentiment-plot">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="/assets/plots/sentiment_Lambic.html" seamless></iframe>
+    </div>
+    <div class="select-plot" id="bock-sentiment-plot">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="/assets/plots/sentiment_Bock.html" seamless></iframe>
+    </div>
+    <div class="select-plot" id="otherales-sentiment-plot">
+      <iframe style="width: 100%; aspect-ratio: 16/9" src="/assets/plots/sentiment_OtherAles.html" seamless></iframe>
+    </div>
   </div>
   <p> see trend where beer region more positive</p>
 </div>
+
+
+<div class="section-left">
+  <p class="subtitle">What do they say? </p>
+  <p>  intro : (expliquer qu'on a pris que certains types significatifs) </p>
+  <p>  Here are the word clouds for each region, for <strong> Belgian/French Ale</strong> : </p>
+  <div class="user">
+    <img class="img-large" src="/assets/plots/belgian.jpg"></img>
+  </div>
+<<<<<<< HEAD
+  <p> see trend where beer region more positive</p>
+</div>
+=======
+  <p>  décrire </p>
+
+  <p>  Here are the word cloud for <strong>Pale Ale</strong> </p>
+  <div class="user">
+    <img class="img-large" src="/assets/plots/pale.jpg"></img>
+  </div>
+  <p>  décrire </p>
+
+  <p>  Here are the word cloud for <strong>Stout</strong> </p>
+  <div class="user">
+    <img class="img-large" src="/assets/plots/stout.jpg"></img>
+  </div>
+  <p>  décrire </p>
+
+</div>
+>>>>>>> f1c48b005f72786a2ce93031ffe8efb827270442
 
       </section>
       <section id="team">
