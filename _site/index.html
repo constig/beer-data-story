@@ -44,46 +44,53 @@
 </div>
 
 <div class="section-left">
-  <p> The world can be divided by regions based on their alcohol consumption habits.
-    The world is then not split into countries anymore but into four <strong>culturally similar</strong>, (based on alcohol consumption) regions.
-    We can distinguish: the predominantly <strong>beer drinking</strong> countries, the predominantly <strong>wine drinking</strong> countries, the predominantly <strong>spirit drinking</strong> countries and the countries that don't have any predominance. <br> <br>
-    Here is a map to visualize this: </p>
+  <p> The world can be divided into regions based on alcohol consumption habits.
+    Rather than thinking of the world as continents and countries, we can think of it as split into four <strong>culturally similar</strong>, based on alcohol consumption, regions.
+    We can distinguish these regions as the following:
+    <list>
+      <li>The predominantly <strong>beer drinking</strong> countries</li>
+      <li>The predominantly <strong>wine drinking</strong> countries</li>
+      <li>The predominantly <strong>spirit drinking</strong> countries</li>
+      <li>The countries that don't have any predominance</li>
+    </list>
   <div class="user">
     <iframe style="width: 100%; aspect-ratio: 16/9" src="/assets/plots/map_principal_beverage.html" seamless></iframe>
   </div>
 
-  <p>As you can see the United Kingdom is not a beer country which provides an answer to the famous maxim from William Skakesbeer (I guess he should not have a lot of friends with these kind of habits):
-  <center> To beer or not to beer, that is the question. </center></p>
+  <p>As you can see the United Kingdom is not a beer country! Which provides an answer to the famous maxim from William Skakesbeer (perhaps he must not have had a lot of friends with these kind of habits):
+  <center><strong>To beer or not to beer, that is the question.</strong></center></p>
 </div>
 
 <div class="section-left">
   <p class="subtitle"> Overview of the grades given per region </p>
-  <p> Let's have a look at the mean in the ratings as function of the drinking habits, for each category: </p>
+  <p> Let's have a look at the mean in the ratings as a function of the drinking habits, for each category: </p>
   <div class="user">
     <iframe style="margin: auto; width: 80%; height: 600px;" src="/assets/plots/grades_beverage.html" seamless></iframe>
   </div>
   <p> Don't hesitate to use the zoom to better observe the mean differences and their confidence intervals! <br>
      You can also use the dropdown to select the grade category! <br>
      <br>
-    It would appear that countries that mostly drink beers, also give them better scores (in overall but also in each category!) ! Spirit and wine look more demanding, but <i>what is behind this? What does that mean?</i><br>
-    In the rest of our analysis, in order to don't have to much equation and math in the data story, we will use the convention that all the result state as significant will be significant at a 95% confidence level. From now the only equation we are likely to meet is of this kind: <br>
-    <center>Beer is made from hops. Hops is a plant. Beer=salad.</center>
+    It would appear that countries that mostly drink beers, also give them better scores (overall and also in each individual category)! Spirit and wine countries look more demanding, but <i>what is behind this? What does it mean?</i>
+    <br>
+    <br>
+    In the rest of our analysis, in order to not have too many equations and math in our data story, we will use the convention that all og the result stated as significant will be significant at a 95% confidence level. From now the only equation we are likely to meet is of this kind: <br>
+    <center><strong>Beer is made from hops. Hops is a plant. Therefore: Beer = salad.</strong></center>
 </p>
 </div>
 
 <div class="section-left">
   <p class="subtitle"> Separation of beer types into more general types </p>
 
-  <p>Beer doesn't have much vitamins, that's why you have to drink lots of it. But, hopefully, we have 70 different beer styles to be healthy. But let's regroup them into larger categories! Maybe we will find similar trends (better grades given by beer regions) in some beer types and not in others!  </p>
+  <p>Beer doesn't have much vitamins, that's why you have to drink lots of it. But thankfully, we have 70 different beer styles to be healthy. Let's regroup them into larger categories! Maybe we will find similar trends (better grades given by beer regions) in some beer types and not in others!  </p>
   <div class="user">
     <iframe style="width: 100%; aspect-ratio: 1;" src="/assets/plots/sunburst.html" seamless></iframe>
   </div>
-  <p>Don't hesitate to have a click around!</p>
+  <p>Don't hesitate to have a click around to get more details for each category!</p>
 </div>
 
 <div class="section-left">
   <p class="subtitle"> Let's examine the grade differences per beer type now! </p>
-  <p>Now that we have more general types of beer, we can easily compare if the differences between grades we have still follow the same trend. Will we find the same pattern ( <i>eg better grades in beer countries</i>)?</p>
+  <p>Now that we have more general types of beer, we can easily compare if the differences between the grades we have still follow the same trend. Will we find the same pattern (<i>eg. better grades in beer countries</i>)?</p>
   <select name="Grade Type" id="grade-type">
     <option value="overall">Overall</option>
     <option value="palate">Palate</option>
@@ -120,9 +127,9 @@
 
   <p class="subtitle"> Ranking of the popularity of the types of beer </p>
   <p>We consider that the popularity of a type of beer is calculated thanks to the number of reviews on this type of beer compared to the others. <br>
-  Let's see the ranking of general type of beers popularity (on the left), and for each general type we can observe the repartition for each sub-type. <br> <br>
-  Also, for each region, they dedicated a proportion of the total reviews number to different types of beers. Some beers are more popular in a region than in an other, for example, <i> wine region dedicated 19.39% of its reviews to Belgian/French Ale </i> which is more than all other regions and this information is shown on the plot thanks to the color of the corresponding bar.
-  The color of the bar is then determined by the principal_beverage region where this type of beer is more popular than in the other region.</p>
+  Let's see the ranking of general type of beers popularity (on the left), and for each general type we can observe the repartition for each sub-type (on the right). <br> <br>
+  Each region has a dedicated proportion of the total number of reviews to different types of beers. Some beers are more popular in a region than in an other, for example, <i> wine regions have 19.39% of their reviews dedicated to Belgian/French Ale </i> which is more than all other regions. This information is shown on the plot thanks to the color of the corresponding bar.
+  The color of the bar is then determined by the drinking region, where this type of beer is more popular than in other regions.</p>
 
   <p> Don't hesitate to use the cursor to see details on the number of reviews! </p>
 
@@ -182,25 +189,25 @@
   <p class="subtitle"> Are there differences in the ABV [%] of the more popular beer per region? </p>
 </div>
 </div>
-<p>Let's now take all the type of beers that we just found more popular in some regions than others and see if they have some particularity in terms of ABV %. <br>
-Here are the mean values of ABV % of the beers that are more popular in a region than in the others:   </p>
+<p>Let's now take all the types of beers that we just found more popular in some regions than others, and see if they have any trends in terms of ABV %. <br> <br>
+Here are the mean values of ABV % of the beers that are more popular in a region rather than in others:   </p>
   <div class="user">
     <img class="img-large" src="/assets/plots/ttest.png"></img>
   </div>
   <p> T-tests were conducted taking a specific region vs all other three regions combined and confirmed that all these
-    differences are indeed significant!<br>
+    differences are indeed significant!<br><br>
   Surprisingly, the average alcohol percentage in spirit countries is relatively lower than in other countries.
   This is rather counter-intuitive, but could be due to the fact that people who often drink hard liquor might prefer to
-  drink lighter beers to contrast with their hard liquor consumption.</p>
+  drink lighter beers to contrast with their general alcohol consumption.</p>
 </div>
 
 
 <div class="section-left">
   <p class="subtitle">Heatmap of the correlations of alcohol ABV [%] and the different grade review </p>
 
-  <p>For a given country label, we asked about the correlation between the differences in alcohol percentage and the
+  <p>For a given country label, we can wonder about the correlation between the differences in alcohol percentage and the
     scores between two types of beer. Is one type of beer more appreciated than another because of a significant difference
-    in alcohol percentage? And if so, does this difference influence the scores of these beers positively or negatively? <br>
+    in alcohol percentage? And if so, does this difference influence the scores of these beers positively or negatively? <br><br>
   On the different heatmaps below, the convention is that between two types of beer the corresponding cell will have the value
   1 if there is a positive correlation between the percentage of alcohol and the grade, the value -1 if the correlation
   detected is negative and 0 if no significant correlation is detected. </p>
@@ -305,7 +312,7 @@ Here are the mean values of ABV % of the beers that are more popular in a region
       due to the fact that one of the identified groups is made up of well-defined beer types, while the other is made up of
       beer subtypes that have been grouped together into types that are probably less natural. </p>
 </div>
-
+<br>
 
 
 <div class="section-left">
@@ -317,24 +324,21 @@ Here are the mean values of ABV % of the beers that are more popular in a region
   <div class="user">
     <img class="img-large" src="/assets/plots/clusters.png"></img>
   </div>
-<p>We found out that </i>Cluster 1</i> contains most of the comments. Therefore, the main topic in the reviews seems to be a positive sentiment and the use of beer related words.
-  (blague en mode que le site a des good vibes). This first cluster represents the main attributes used to describe a beer mixed positive words.
+<p>We found out that </i>Cluster 1</i> contains most of the comments. Therefore, the main topic in the reviews seems to be a positive sentiment and the use of beer related words. This first cluster represents the main attributes used to describe a beer mixed positive words.
   On the other hand </i>Cluster 2</i>, </i>3</i> and </i>4</i> were found to contain less comments and seem to represent more specific topics than </i>Cluster 1</i>. Each one of these clusters focuses on special
   beers in terms of aroma and taste (</i>Cluster 2</i> focuses on brown, dark, caramel beers; </i>Cluster 3</i> focuses on fruity flavors such as cherry, sour… and </i>Cluster 4</i> is focused on chocolate and coffee flavours).
 <p>Now that we know which are the main topics in the comments, let's see if your drinking habits are linked to the topics you will discuss when reviewing! It looks like wine drinkers are more represented in
    the first and more general cluster. However, spirit drinkers tend to be more linked to fruity (</i>Cluster 2</i>) and dark/brown beer (</i>Cluster 3</i>). The last cluster, related to chocolate and coffee beers, has a majority
    of beer reviewers.</p>
 </div>
-<br><br>
-
-
+<br>
 
 <div class="section-left">
   <p class="subtitle"> Do some regions write in a more complexe way than others? </p>
-  <p>Comments can reflect sentiments, and this can be studied across the different
-    drinking habit regions. The sentiment score we use goes from -1 to 1 (where -1 is a negative comment, 0 is neutral and 1 is very positive). We can see that overall, the mean sentiment of the reviews is positive!
-    Indeed, the main topic we found during the clustering analysis also suggested that a lot of comments used positive words.We found out beer drinkers tend to write more positive comments, and this happens to be true for all types of beers. Here are the results for the 3 types of beer where the sentiment difference was the most significant. </p>
-  <select name="Readability Type" id="readability-type">
+  <p> Now, let's study the complexity of the comments! Here, we used the Dale-Chall readability grade with a range between 0 and 100. It assesses the
+      comprehension difficulty of a reader when reading the comment. In order to define if a comment has difficult words, the algorithm will, putting
+      other things aside, compare these words to 3000 words commonly used by an average fourth-grade American student.</p>
+    <select name="Readability Type" id="readability-type">
     <option value="paleale">Pale Ale</option>
     <option value="belgianfrenchale">Belgian/French Ale</option>
     <option value="otherlagers">Other Lagers</option>
@@ -350,15 +354,15 @@ Here are the mean values of ABV % of the beers that are more popular in a region
       <img class="img-large" src="/assets/plots/readability_OthersLagers.png"></img>
     </div>
   </div>
-  <p> </p>
+  <p>Visually, there is a certain difference between the distribution for the regional beers and that of the other regions. The readability score seems to be visually lower in the beer regions, which was confirmed by a test that allows us to conclude that the average readability score in the beer regions is significantly lower than in the other regions.</p>
 </div>
 
 
 <div class="section-left">
   <p class="subtitle"> Do some regions express themselves in a more positive/negative way?</p>
-  <p> Now, let's study the complexity of the comments! Here, we used the Dale-Chall readability grade with a range between 0 and 100. It assesses the
-    comprehension difficulty of a reader when reading the comment. In order to define if a comment has difficult words, the algorithm will, putting
-    other things aside, compare these words to 3000 words commonly used by an average fourth-grade American student.</p>
+  <p>Comments can reflect sentiments, and this can be studied across the different
+    drinking habit regions. The sentiment score we use goes from -1 to 1 (where -1 is a negative comment, 0 is neutral and 1 is very positive). We can see that overall, the mean sentiment of the reviews is positive!
+    Indeed, the main topic we found during the clustering analysis also suggested that a lot of comments used positive words. We found out beer drinkers tend to write more positive comments, and this happens to be true for all types of beers. Here are the results for the 3 types of beer where the sentiment difference was the most significant. </p>
   <select name="Sentiment Type" id="sentiment-type">
     <option value="lambic">Lambic</option>
     <option value="bock">Bock</option>
@@ -375,7 +379,7 @@ Here are the mean values of ABV % of the beers that are more popular in a region
       <img class="img-large" src="/assets/plots/sentiment_OtherAles.png"></img>
     </div>
   </div>
-  <p>We found out that beer drinkers tend to use a less complex language when it comes to reviews.</p>
+  <p>Again, there is some difference between the distribution for the beer region and the other regions. The sentiment polarity score seems visually more important in the beer regions, which was confirmed by a test that allows us to conclude that the average sentiment polarity in the beer regions is significantly higher than in the other regions.</p>
 </div>
 
 
