@@ -163,6 +163,28 @@ document.addEventListener(
       document.getElementById(readability_category + '-readability-plot').style.visibility = 'visible';
     })
 
+    // DROPDOWN 3, sentiment analysis
+
+    // Hide all subplots
+    sentiment_category_list = ['paleale', 'bock', 'otherales']
+    sentiment_category_list.forEach(element => {
+      document.getElementById(element + '-sentiment-plot').style.visibility = 'hidden';
+    });
+
+    // Show default subplot
+    document.getElementById('lambic-sentiment-plot').style.visibility = 'visible';
+
+    document.getElementById('sentiment-type').addEventListener('change', function() {
+      sentiment_category_list = ['paleale', 'bock', 'otherales']
+      sentiment_category_list.forEach(element => {
+        document.getElementById(element + '-sentiment-plot').style.visibility = 'hidden';
+      });
+
+      // Create event listener to detect dropdown change
+      sentiment_category = document.getElementById('sentiment-type').value;
+      document.getElementById(sentiment_category + '-sentiment-plot').style.visibility = 'visible';
+      });
+
   },
   !1
 );
