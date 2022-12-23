@@ -97,8 +97,8 @@
   <div class="double-plot">
 
     <div class="double-plot-left">
-      <iframe style="width: 100%; height: 100%" src="{{ "/assets/plots/general.html" | prepend: site.baseurl }}" seamless></iframe>
-      <div class="highlighter" id="highlighter"></div>
+      <iframe style="width: 100%; height: 100%; position: relative; z-index: 1;" src="{{ "/assets/plots/general.html" | prepend: site.baseurl }}" seamless></iframe>
+      <div style="z-index: 0;" class="highlighter" id="highlighter"></div>
     </div>
 
     <div class="double-plot-right">
