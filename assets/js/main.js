@@ -143,7 +143,7 @@ document.addEventListener(
     // DROPDOWN 3, sentiment analysis
 
     // Hide all subplots
-    sentiment_category_list = ['paleale', 'belgianfrenchale', 'otherlagers']
+    sentiment_category_list = ['paleale', 'bock', 'otherales']
     sentiment_category_list.forEach(element => {
       document.getElementById(element + '-sentiment-plot').style.visibility = 'hidden';
     });
@@ -152,7 +152,7 @@ document.addEventListener(
     document.getElementById('lambic-sentiment-plot').style.visibility = 'visible';
 
     document.getElementById('sentiment-type').addEventListener('change', function() {
-      sentiment_category_list = ['paleale', 'bock', 'otherlagers']
+      sentiment_category_list = ['paleale', 'bock', 'otherales']
       sentiment_category_list.forEach(element => {
         document.getElementById(element + '-sentiment-plot').style.visibility = 'hidden';
       });
